@@ -9,7 +9,7 @@ export function HourlyTemperature() {
   //fetches hourly  data
   const fetchHourlyData = async (lat, lon) => {
     try {
-      const response = await fetch(`/hourlyCall?lat=${lat}&lon=${lon}`);
+      const response = await fetch(`https://backend-weather-1zts.onrender.com/hourlyCall?lat=${lat}&lon=${lon}`);
       if (!response.ok) {
         const errorDetails = await response.text(); // takes error response details
         console.error("Fetching data error:", errorDetails);
