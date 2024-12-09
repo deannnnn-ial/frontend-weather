@@ -1,3 +1,5 @@
+import '../../styles.css';
+
 export function AirDetails() {
   const humidity = sessionStorage.getItem("humidity");
   const windSpeed = sessionStorage.getItem("wind-speed");

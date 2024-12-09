@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import '../../styles.css';
 
 export function WeatherDetails() {
   const navigate = useNavigate();
