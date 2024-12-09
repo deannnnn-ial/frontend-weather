@@ -10,7 +10,7 @@ export function SearchBar() {
     //handle data input 
     const handleInput = (value) => {
         //find locations using the input
-        fetch(`/api?input=${value}`)
+        fetch(`https://backend-weather-1zts.onrender.com/api?input=${value}`)
             .then((response) => {
                 if (!response.ok) throw new Error('Error fetching data');
                 return response.json();
@@ -31,7 +31,7 @@ export function SearchBar() {
     }
 
     function cityClicked(location) {
-        fetch(`/weatherCall?lat=${location.lat}&lon=${location.lon}`)
+        fetch(`https://backend-weather-1zts.onrender.com/weatherCall?lat=${location.lat}&lon=${location.lon}`)
             .then((response) => {
                 if (!response.ok) throw new Error('Error fetching data');
                 return response.json();
